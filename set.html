@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<div class="wrap">
+   <div class="chat-area">
+      <ul id ="messages"></ul>
+   </div>
+   <textarea id="textbox" type="text" placeholder="shout"></textarea>
+</div>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+var messages = document.getElementById("messages");
+var textbox = document.getElementById("textbox");
+var button = document.getElementById("button");
+
+
+// with enter press button
+textbox.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+       if(e.shiftKey) {
+            // With shift
+        }else {
+            // Without shift
+            chatbox(e);
+        }
+    }
+});
+
+function chatbox(e) {
+   // var Listwrap = document.createElement('div', 'listwrap');
+   var newMessage = document.createElement("p");
+   newMessage.setAttribute('class', 'list');
+   // $( ".list, .c-hour" ).wrapAll( "<div class='new'></div>" );
+   
+   var hour = document.createElement("span");
+   hour.setAttribute('class', 'c-hour');
+   var d = new Date();
+   var n = d.getHours();
+   var m = d.getMinutes();
+   hour.innerHTML = n + ":" + m;
+   messages.appendChild(hour);
+   
+   newMessage.innerHTML = textbox.value;
+   messages.appendChild(newMessage);
+   // $( ".list, .c-hour" ).wrapAll( "<div class='new'></div>" );
+  $(newMessage).wrapAll( "<div class='new'></div>" );
+  // $(hour).wrapAll( "<div class='new'></div>" );
+
+   textbox.value = "";
+
+}
+
+</script>
+</body>
+</html>

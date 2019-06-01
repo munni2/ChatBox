@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<style type="text/css">
+.list:before{
+  content: "";
+  position: absolute;
+  background: url('images/pic.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: -50px;
+}
+#file-list:before{
+  content: "";
+  position: absolute;
+  background: url('images/pic.png') no-repeat;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: -50px;
+}
+.chooseFile{
+    position:relative;
+    display:inline-block;    
+    width: 18px;
+    height: 26px;
+    cursor: pointer;
+    padding: 4px 6px 4px 8px;
+    margin-top: 2px;
+    background: url('images/clip.png') no-repeat;
+}
+</style>
+
+
+<div class="wrap">
+    <div class="title">
+        <div class="logo">
+          Chat Box 
+        </div>
+        <div class="chooseFile">
+          <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+        </div>
+    </div>
+    <div class="chat-area">
+        
+        <div id ="messages">
+            <div class ="newMessage"></div>
+        </div>
+    </div>
+    <textarea id="textbox" type="text" placeholder="shout"></textarea>
+</div>
+
+
+
+
+<!-- jquery-->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.1/emojionearea.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

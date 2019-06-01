@@ -1,0 +1,100 @@
+body{
+  font-family: verdana;
+}
+.wrap{
+   width:320px;
+   margin:50px auto 0;
+}
+.chat-area{
+   width:318px;
+   border:1px solid #544379;
+   margin:0 auto;
+   height: 280px;
+   overflow: auto;
+}
+.title{
+   background-color:#544379;
+   color:#fff;
+   font-family:verdana;
+   text-align:center;
+   padding: 5px 0;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   display: flex;
+   justify-content: space-between;
+}
+.logo{
+    font-family: 'Cookie', cursive;
+    font-size: 27px;
+    padding-top: 3px;
+    padding-left: 11px;
+}
+#messages{
+   padding-inline-start: 0px;
+}
+.list{
+   background-color: #544379;
+    color: #fff;
+    font-family: verdana;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    position: relative;
+    top: 0px;
+    margin-left: 56px;
+    display: inline-block;
+}
+.list:before{
+    content: "";
+    position: absolute;
+    background: url("images/pic.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: -50px;
+}
+#textbox{
+    width: 320px;
+    height: 80px;
+    font-family: cursive;
+}
+.c-hour{
+    background-color:#ccc;
+    text-align:center;
+    margin: 0 auto;
+    padding:2px 5px;
+    font-family:verdana;
+    font-size:9px;
+    float: right;
+}
+
+.chooseFile{
+    position:relative;
+    display:inline-block;    
+    width: 18px;
+    height: 26px;
+    cursor: pointer;
+    padding: 4px 6px 4px 8px;
+    margin-top: 2px;
+    background: url('../assets/images/clip.png') no-repeat;
+}
+.chooseFile input[type="file"]{
+    -webkit-appearance: none;
+    width: 30px;
+    top: 3px;
+    left: -5px;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+}
+#file-list{
+    border: 2px solid #ccc;
+    width: 30%;
+    margin: 7px;
+    padding: 6px;
+    position: relative;
+    top: 0px;
+    margin-left: 56px;
+}
